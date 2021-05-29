@@ -23,10 +23,12 @@ public class AdminpanelApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
+        this.tipoTapasRepository.deleteAll();
+
         tipoTapa tipo = new tipoTapa();
         tipo.setTipoTapa("corchos");
         tipoTapa tipo2 = new tipoTapa();
-        tipo.setTipoTapa("chapas");
+        tipo2.setTipoTapa("chapas");
 
         this.tipoTapasRepository.save(tipo);
         this.tipoTapasRepository.save(tipo2);
